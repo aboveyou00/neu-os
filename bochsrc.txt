@@ -2,7 +2,7 @@
 plugin_ctrl: unmapped=1, biosdev=1, speaker=1, extfpuirq=1, parallel=1, serial=1, gameport=1, iodebug=1
 config_interface: textconfig
 display_library: x
-magic_break: enabled=0
+magic_break: enabled=1
 print_timestamps: enabled=0
 port_e9_hack: enabled=0
 
@@ -12,7 +12,7 @@ logprefix: %t%e%d
 panic: action=ask
 error: action=report
 info: action=report
-debug: action=ignore, pci=report
+debug: action=ignore # , pci=report
 
 cpu: count=1, ips=10000000, reset_on_triple_fault=1, cpuid_limit_winnt=0 #model=bx_generic,
 cpuid: family=6, model=0x03, stepping=3, mmx=1, apic=xapic, sse=sse2, sse4a=0, sep=1, aes=0, xsave=0, xsaveopt=0, movbe=0, adx=0, smep=0, avx=0, avx_f16c=0, avx_fma=0, bmi=0, xop=0, tbm=0, fma4=0, vmx=1, x86_64=1, 1g_pages=0, pcid=0, fsgsbase=0, mwait=1
