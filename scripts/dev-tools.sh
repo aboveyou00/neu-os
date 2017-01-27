@@ -3,7 +3,7 @@
 set -e
 
 #emulator:
-sudo apt-get install bochs -y
+sudo apt-get install bochs bochs-x -y
 
 #c/c++ compiler:
 sudo apt-get install gcc -y
@@ -20,8 +20,8 @@ rm -f binutils.tar.gz
 sudo apt-get install libisl-dev libcloog-isl-dev texinfo -y
 #libgmp3-dev libmpfr-dev libmpc-dev
 
-git clone http://github.com/gcc-mirror/gcc
-cd gcc
+git clone http://github.com/gcc-mirror/gcc gcc-src
+cd gcc-src
 git checkout tags/gcc_5_3_0_release
 ./contrib/download_prerequisites
 cd ..

@@ -2,4 +2,5 @@
 
 set -e
 
-exit 1
+bash ./scripts/build.sh
+bochs
