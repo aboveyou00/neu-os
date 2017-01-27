@@ -5,6 +5,9 @@ set -e
 mkdir -p tools
 cd tools
 
+#assembler
+sudo apt-get install nasm -y
+
 #c/c++ compiler:
 sudo apt-get install gcc -y
 

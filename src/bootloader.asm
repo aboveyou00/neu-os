@@ -10,9 +10,31 @@ main:
   mov si, hello_world_str
   call print_string
 
+  mov ax, 42
+  call itos
+  call print_string
+
 halt:
   hlt
   jmp halt
+
+itos:
+  mov si, storage.end-1
+  .itos_loop:
+    mov dx, 0
+    mov cx, 10
+    div cx
+    xchg ax, dx
+    add al, '0'
+    dec si
+    mov [si], al
+    mov ax, dx
+    or ax, ax
+    jnz .itos_loop
+  .after:
+    ret
+storage times 4 db 0
+  .end:
 
 print_string:
   lodsb
